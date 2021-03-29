@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/25bc89a4e6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="slider-container">
+      <div class="left-slide">
+        <div style="background-color: #df2407">
+          <h1>Great Wall of China</h1>
+          <p>
+            The Great Wall of China is a wall that covers much of the northern
+            border of China. The length of all the portions of the wall built by
+            every Chinese Dynasty, plus various branches, the total comes to
+            13,171 miles long. The Wall construction started by the Qin Dynasty
+            and following dynasties continued to work on it. Later the Ming
+            Dynasty rebuilt the wall.
+          </p>
+        </div>
+        <div style="background-color: #006341">
+          <h1>Chichén Itzá El Castillo (Mexico)</h1>
+          <p>
+            Chichen Itza means "at the mouth of the well of the Itza". Located
+            on the Yucatan Peninsula, Chichen Itza was a large city built by the
+            Maya people. It thrived from about 600 AD., until 1221, when the
+            power in the region shifted to Mayapan.
+          </p>
+        </div>
+        <div style="background-color: #000000">
+          <h1>Petra (Jordan)</h1>
+          <p>
+            Inhabited since prehistoric times and situated between the Red Sea
+            and the Dead Sea. Petra is half-built, half-carved into the rock,
+            and is surrounded by mountains riddled with passages and gorges. It
+            is one of the world's most famous archaeological sites, where
+            ancient Eastern traditions blend with Hellenistic architecture.
+          </p>
+        </div>
+        <div style="background-color: #d91023">
+          <h1>Machu Picchu (Peru)</h1>
+          <p>
+            Machu Picchu is the site of ancient Inca ruins. It is perched above
+            the Urubamba River valley in a narrow saddle between two sharp
+            peaks—Machu Picchu (“Old Peak”) and Huayna Picchu (“New Peak”)—at an
+            elevation of 2,350 metres. It's one of the few major pre-Columbian
+            ruins found nearly intact.
+          </p>
+        </div>
+        <div style="background-color: #002776">
+          <h1>Christ The Redeemer (Brazil)</h1>
+          <p>
+            Colossal statue of Jesus Christ at the summit of Mount Corcovado.
+            The statue was completed in 1931 and stands 30 metres tall, its
+            horizontally outstretched arms spanning 28 metres. The statue has
+            become emblematic of both the city of Rio de Janeiro and the whole
+            nation of Brazil.
+          </p>
+        </div>
+        <div style="background-color: #008c45">
+          <h1>Colosseum (Italy)</h1>
+          <p>
+            The Colosseum is the largest amphitheater (meaning “theatre in the
+            round”) in the world! Oval in shape, it measures 189m long, 156m
+            wide and 50m high (about the height of a 12 storey building).
+          </p>
+        </div>
+        <div style="background-color: #ff9933">
+          <h1>Taj Mahal (India)</h1>
+          <p>
+            An immense mausoleum of white marble, built in Agra between 1631 and
+            1648 by order of the Mughal emperor Shah Jahan in memory of his
+            wife. The Taj Mahal is the jewel of India and one of the universally
+            admired masterpieces of the world's heritage.
+          </p>
+        </div>
+      </div>
+      <div class="right-slide">
+        <div style="background-image: url(./TajMahal.jpg)"></div>
+        <div style="background-image: url(./Colosseum.jpg)"></div>
+        <div style="background-image: url(./ChristtheRedeemer.jpg)"></div>
+        <div style="background-image: url(./MachuPicchu.jpg)"></div>
+        <div style="background-image: url(./Petra.jpg)"></div>
+        <div style="background-image: url(./ChichénItzá.jpg)"></div>
+        <div style="background-image: url(./GreatWallofChina.jpg)"></div>
+      </div>
+      <div class="action-buttons">
+        <button class="down-button">
+          <i class="fas fa-arrow-down"></i>
+        </button>
+        <button class="up-button">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        font-family: "Pangolin", cursive;
+      }
+
+      .slider-container {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .left-slide {
+        width: 35%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        transition: transform 0.4s ease-in-out;
+      }
+
+      .left-slide > div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+      }
+
+      .left-slide h1 {
+        margin-top: -10px;
+        margin-bottom: 20px;
+        font-size: 35px;
+      }
+
+      .right-slide {
+        width: 65%;
+        height: 100%;
+        top: 0;
+        left: 35%;
+        position: absolute;
+        transition: transform 0.4s ease-in-out;
+      }
+
+      .right-slide > div {
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      button {
+        padding: 10px;
+        cursor: pointer;
+        font-size: 27px;
+        border: none;
+        background-color: #b2b9b9ab;
+        color: #ffffff;
+      }
+
+      button:hover {
+        color: #300e28;
+      }
+
+      button:focus {
+        outline: none;
+      }
+
+      .slider-container .action-buttons button {
+        top: 50%;
+        left: 35%;
+        position: absolute;
+        z-index: 100;
+      }
+
+      .slider-container .action-buttons .down-button {
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        transform: translateX(-100%);
+      }
+
+      .slider-container .action-buttons .up-button {
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        transform: translateY(-100%);
+      }
+
+      p {
+        font-size: 25px;
+        padding: 40px;
+        letter-spacing: 1px;
+      }
+    </style>
+
+    <script>
+      const sliderContainer = document.querySelector(".slider-container");
+      const slideRight = document.querySelector(".right-slide");
+      const slideLeft = document.querySelector(".left-slide");
+      const upButton = document.querySelector(".up-button");
+      const downButton = document.querySelector(".down-button");
+      const slidesLength = slideRight.querySelectorAll("div").length;
+
+      let activeSlideIndex = 0;
+
+      slideLeft.style.top = `-${(slidesLength - 1) * 100}vh`;
+
+      upButton.addEventListener("click", () => changeSlide("up"));
+      downButton.addEventListener("click", () => changeSlide("down"));
+
+      const changeSlide = (direction) => {
+        const sliderHeight = sliderContainer.clientHeight;
+        if (direction === "up") {
+          activeSlideIndex++;
+          if (activeSlideIndex > slidesLength - 1) {
+            activeSlideIndex = 0;
+          }
+        } else if (direction === "down") {
+          activeSlideIndex--;
+          if (activeSlideIndex < 0) {
+            activeSlideIndex = slidesLength - 1;
+          }
+        }
+
+        slideRight.style.transform = `translateY(-${
+          activeSlideIndex * sliderHeight
+        }px)`;
+        slideLeft.style.transform = `translateY(${
+          activeSlideIndex * sliderHeight
+        }px)`;
+      };
+    </script>
+  </body>
+</html>
